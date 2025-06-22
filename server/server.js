@@ -19,7 +19,6 @@ app.use("/api", require("./routes/event"));
 
 // 📂 /data 폴더를 정적 파일로 공개
 app.use("/data", express.static(path.join(__dirname, "data")));
-app.use("/data", express.static(path.join(__dirname, "users")));
 // 🔁 인기 상품 갱신 타이머
 const { calculateAndSavePopularity } = require("./utils/helpers");
 setInterval(calculateAndSavePopularity, 10 * 1000); // 10초마다 실행
