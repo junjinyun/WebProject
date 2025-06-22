@@ -23,14 +23,14 @@
       {
         "id": 4,
         "imageUrl": "/public/event2.png",
-        "title": "색깔별 리소스",
+        "title": "더미이벤트1",
         "description": "다양한 상품 보기",
         "backgroundColor": "#aaccff"
       },
       {
         "id": 5,
         "imageUrl": "/public/event3.png",
-        "title": "주문제작",
+        "title": "더미이벤트2",
         "description": "다양한 상품 보기",
         "backgroundColor": "#aaccff"
       }
