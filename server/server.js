@@ -1,5 +1,6 @@
 const express = require("express");
 const cors = require("cors");
+const path = require("path");
 const app = express();
 
 // ✅ Railway에서는 환경변수로 포트를 제공하므로 고정 포트 사용 금지
@@ -15,6 +16,9 @@ app.use("/api", require("./routes/product"));
 app.use("/api", require("./routes/liked"));
 app.use("/api", require("./routes/purchase"));
 app.use("/api", require("./routes/event"));
+
+// 📂 /data 폴더를 정적 파일로 공개
+app.use("/data", express.static(path.join(__dirname, "data")));
 
 // 🔁 인기 상품 갱신 타이머
 const { calculateAndSavePopularity } = require("./utils/helpers");
